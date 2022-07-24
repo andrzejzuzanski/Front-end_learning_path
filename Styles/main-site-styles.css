@@ -1,0 +1,27 @@
+body {
+    background-color: #BBD0FF;
+    height: 8000px;
+}
+nav, footer {
+    background-color: #B8C0FF;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+footer {
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+nav a {
+    text-decoration: none;
+    margin-right: 1rem;
+}
+main {
+    height: 1000px;
+}
