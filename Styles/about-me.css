@@ -4,12 +4,13 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #faedcd;
-    height: 1000px;
+    margin-top: 8%;
     font-family: "Roboto Mono", monospace;
 }
 section {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 50%;
     padding-top: 4%;
 }
