@@ -21,3 +21,8 @@ section img{
     border-radius: 15px;
     margin-left: 2rem;
 }
+@media (max-width: 768px) {
+    section{
+        flex-direction: column;
+    }
+}
