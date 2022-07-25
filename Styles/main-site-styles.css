@@ -57,9 +57,14 @@ main {
   margin-top: 5rem;
     width: 80%;
     height: 15%;
+    box-sizing: border-box;
+    transition: transform 0.8s, box-shadow 0.3s, height 0.6s;
 }
 .main-container:hover{
-    transform: ;
+    border: 1px solid #ccd5ae;
+    transform: translateY(-0.4rem);
+    box-shadow: 0 0.7rem 0.7rem 0.1rem #ccd5ae;
+    height: 30%;
 }
 @media (max-width: 452px) {
   nav {
