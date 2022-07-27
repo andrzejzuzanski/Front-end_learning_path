@@ -1,4 +1,5 @@
 let isMobile = window.matchMedia("(any-pointer:coarse)").matches;
+console.log(isMobile);
 
 //Background color change script //
 const bodySelector = document.querySelector("body");
@@ -37,7 +38,7 @@ if(isMobile){
     let containerHeight = htmlContainer.style.height;
     if (containerHeight === "33vh") {
       htmlUlContainter.style.visibility = "hidden";
-      htmlContainer.style.height = "";
+      htmlContainer.style.height = "7.7vh";
     } else {
       setTimeout(() => {
         htmlUlContainter.style.visibility = "visible";
