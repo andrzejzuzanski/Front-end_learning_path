@@ -62,6 +62,9 @@ main {
 }
 .main-container:hover {
   border: 1px solid #ccd5ae;
+
+  height: 33vh;
+
   transform: translateY(-0.4rem);
   box-shadow: 0 0.7rem 0.7rem 0.1rem #ccd5ae;
   transition: transform 0.8s, box-shadow 0.3s, height 0.6s;
@@ -71,8 +74,15 @@ main {
   text-align: center;
 }
 
-#HTML-container ul{
+/* #HTML-container ul {
   visibility: hidden;
+} */
+
+.html-ul {
+  visibility: hidden;
+}
+.main-container:hover > ul {
+  visibility: visible;
 }
 
 @media (max-width: 292px) {
