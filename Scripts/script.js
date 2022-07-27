@@ -22,3 +22,15 @@ easterFooterSelector.addEventListener('click', () => {
         easterCounter = 0;
     }
 })
+
+//Containers click event
+const htmlContainer = document.querySelector("#HTML-container");
+htmlContainer.addEventListener('click', () => {
+  let containerHeight = htmlContainer.style.height;
+  console.log(containerHeight);
+  if(containerHeight === "34vh"){
+    htmlContainer.style.height = "";
+  } else {
+    htmlContainer.style.height = "34vh";
+  }
+});
