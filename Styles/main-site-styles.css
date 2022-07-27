@@ -1,4 +1,4 @@
-.example::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
 .material-symbols-rounded {
@@ -67,6 +67,7 @@ footer p {
   margin-top: 4rem;
   width: 80%;
   max-height: 5rem;
+  padding-right: 0.7rem;
   overflow: hidden;
   box-sizing: border-box;
   transition: transform 0.8s, box-shadow 0.3s, height 0.6s, max-height 1s;
