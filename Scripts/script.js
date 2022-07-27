@@ -31,20 +31,34 @@ easterFooterSelector.addEventListener("click", () => {
 
 //HTML container
 if(isMobile){
-  const htmlContainer = document.querySelector("#HTML-container");
-  const htmlUlContainter = htmlContainer.querySelector("ul");
+  // const htmlContainer = document.querySelector("#HTML-container");
+  // const htmlUlContainter = htmlContainer.querySelector("ul");
+  const aaabbbccc = document.querySelectorAll(".main-container");
+  console.log(aaabbbccc);
   
-  htmlContainer.addEventListener("click", () => {
-    let containerHeight = htmlContainer.style.height;
-    if (containerHeight === "33vh") {
-      htmlUlContainter.style.visibility = "hidden";
-      htmlContainer.style.height = "7.7vh";
-    } else {
-      setTimeout(() => {
-        htmlUlContainter.style.visibility = "visible";
-      }, 450);
-      htmlContainer.style.height = "33vh";
-    }
-  });
+  for(let container of aaabbbccc){
+    container.addEventListener("click", () => {
+      
+  })
+
+
+    // max-height: 7.7vh;
+    // overflow: hidden;
+  };
+
+
+  // htmlContainer.addEventListener("click", () => {
+  //   let containerHeight = htmlContainer.style.height;
+  //   if (containerHeight === "33vh") {
+  //     htmlUlContainter.style.visibility = "hidden";
+  //     htmlContainer.style.height = "7.7vh";
+  //   } else {
+
+  //     htmlContainer.style.height = "33vh";
+  //     setTimeout(() => {
+  //       htmlUlContainter.style.visibility = "visible";
+  //     }, 450);
+  //   }
+  // });
   
 }
