@@ -5,10 +5,10 @@
 body {
   background-color: #faedcd;
   font-family: "Roboto Mono", monospace;
-  height: 100vh;
+  height: auto;
+  /* min-height: 100vh; */
 }
-nav,
-footer {
+nav {
   background-color: #ccd5ae;
   height: 3rem;
   display: flex;
@@ -35,56 +35,59 @@ nav a:hover {
 nav span {
   margin-right: 0.5rem;
 }
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: flex-end; */
+  margin: auto;
+  width: 60%;
+  /* height: auto; */
+  padding-bottom: 3rem;
+}
 footer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  margin-top: 3rem;
+  width: 100%;
+  background-color: #ccd5ae;
+  height: 3rem;
+
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 footer p {
   margin-right: 2rem;
 }
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  width: 60%;
-  height: 100%;
-}
 .main-container {
   background-color: #fefae0;
   border-radius: 15px;
   margin-top: 4rem;
   width: 80%;
-  /* height: 7.7vh; */
-  max-height: 7.7vh;
+  max-height: 5rem;
   overflow: hidden;
   box-sizing: border-box;
-  transition: transform 0.8s, box-shadow 0.3s, height 0.6s, max-height 0.6s;
+  transition: transform 0.8s, box-shadow 0.3s, height 0.6s, max-height 1s;
+}
+.main-container:last-of-type{
+  margin-bottom: 3rem;
 }
 .main-container:hover {
   border: 1px solid #ccd5ae;
-
-  max-height: 38vh;
-  /* height: 33vh; */
+  max-height: 80vh;
   transform: translateY(-0.4rem);
   box-shadow: 0 0.7rem 0.7rem 0.1rem #ccd5ae;
 }
 
 .main-container h1 {
   text-align: center;
-
 }
 
-/* .html-ul {
-  visibility: hidden;
-} */
-/* .main-container:hover > ul {
-  visibility: visible;
-} */
-
-
 @media only screen and (hover: none) and (pointer: coarse){
+
+  }
   @media (max-width: 292px) {
     nav {
       height: 9rem;
@@ -100,15 +103,8 @@ main {
     nav {
       height: 6rem;
     }
-  }
-/* 
-  .main-container{
-    max-height: 7vh;
-  }
-  .main-container h1 {
-    margin-top: 1.5vh;
-  } */
-/* #HTML-container ul {
-  visibility: hidden;
-} */
+    .main-container{
+      width: 100%;
+    }
+
   }
