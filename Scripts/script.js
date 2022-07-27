@@ -14,23 +14,33 @@ window.addEventListener("scroll", () => {
 //Easter egg script
 const easterFooterSelector = document.querySelector("#easterEgg");
 let easterCounter = 0;
-easterFooterSelector.addEventListener('click', () => {
-    if(!(easterCounter === 4)){
-        easterCounter++;
-    } else {
-        window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley", "_blank");
-        easterCounter = 0;
-    }
-})
+easterFooterSelector.addEventListener("click", () => {
+  if (!(easterCounter === 4)) {
+    easterCounter++;
+  } else {
+    window.open(
+      "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley",
+      "_blank"
+    );
+    easterCounter = 0;
+  }
+});
 
 //Containers click event
+
+//HTML container
 const htmlContainer = document.querySelector("#HTML-container");
-htmlContainer.addEventListener('click', () => {
+const htmlUlContainter = htmlContainer.querySelector("ul");
+
+htmlContainer.addEventListener("click", () => {
   let containerHeight = htmlContainer.style.height;
-  console.log(containerHeight);
-  if(containerHeight === "34vh"){
+  if (containerHeight === "33vh") {
+    htmlUlContainter.style.visibility = "hidden";
     htmlContainer.style.height = "";
   } else {
-    htmlContainer.style.height = "34vh";
+    setTimeout(() => {
+      htmlUlContainter.style.visibility = "visible";
+    }, 450);
+    htmlContainer.style.height = "33vh";
   }
 });
