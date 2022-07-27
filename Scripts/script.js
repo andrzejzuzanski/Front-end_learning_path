@@ -1,3 +1,5 @@
+let isMobile = window.matchMedia("(any-pointer:coarse)").matches;
+
 //Background color change script //
 const bodySelector = document.querySelector("body");
 window.addEventListener("scroll", () => {
@@ -26,21 +28,22 @@ easterFooterSelector.addEventListener("click", () => {
   }
 });
 
-//Containers click event
-
 //HTML container
-const htmlContainer = document.querySelector("#HTML-container");
-const htmlUlContainter = htmlContainer.querySelector("ul");
-
-htmlContainer.addEventListener("click", () => {
-  let containerHeight = htmlContainer.style.height;
-  if (containerHeight === "33vh") {
-    htmlUlContainter.style.visibility = "hidden";
-    htmlContainer.style.height = "";
-  } else {
-    setTimeout(() => {
-      htmlUlContainter.style.visibility = "visible";
-    }, 450);
-    htmlContainer.style.height = "33vh";
-  }
-});
+if(isMobile){
+  const htmlContainer = document.querySelector("#HTML-container");
+  const htmlUlContainter = htmlContainer.querySelector("ul");
+  
+  htmlContainer.addEventListener("click", () => {
+    let containerHeight = htmlContainer.style.height;
+    if (containerHeight === "33vh") {
+      htmlUlContainter.style.visibility = "hidden";
+      htmlContainer.style.height = "";
+    } else {
+      setTimeout(() => {
+        htmlUlContainter.style.visibility = "visible";
+      }, 450);
+      htmlContainer.style.height = "33vh";
+    }
+  });
+  
+}
