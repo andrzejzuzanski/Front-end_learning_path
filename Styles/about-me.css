@@ -25,4 +25,7 @@ section img{
     section{
         flex-direction: column;
     }
+    section img {
+        margin-left: 0;
+    }
 }
