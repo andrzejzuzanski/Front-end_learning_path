@@ -31,34 +31,16 @@ easterFooterSelector.addEventListener("click", () => {
 
 //HTML container
 if(isMobile){
-  // const htmlContainer = document.querySelector("#HTML-container");
-  // const htmlUlContainter = htmlContainer.querySelector("ul");
-  const aaabbbccc = document.querySelectorAll(".main-container");
-  console.log(aaabbbccc);
-  
-  for(let container of aaabbbccc){
+  const allContainers = document.querySelectorAll(".main-container");
+
+  for(let container of allContainers){
     container.addEventListener("click", () => {
-      
+      let aaa = container.style.maxHeight;
+      if(aaa === "" || aaa === "5rem"){
+        container.style.maxHeight = "80vh"
+      } else {
+        container.style.maxHeight = "5rem"
+      }
   })
-
-
-    // max-height: 7.7vh;
-    // overflow: hidden;
   };
-
-
-  // htmlContainer.addEventListener("click", () => {
-  //   let containerHeight = htmlContainer.style.height;
-  //   if (containerHeight === "33vh") {
-  //     htmlUlContainter.style.visibility = "hidden";
-  //     htmlContainer.style.height = "7.7vh";
-  //   } else {
-
-  //     htmlContainer.style.height = "33vh";
-  //     setTimeout(() => {
-  //       htmlUlContainter.style.visibility = "visible";
-  //     }, 450);
-  //   }
-  // });
-  
 }
