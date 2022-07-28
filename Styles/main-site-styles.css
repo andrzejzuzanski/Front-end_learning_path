@@ -99,15 +99,12 @@ footer {
     height: 3rem;
     overflow: hidden;
     transition: height 0.6s;
-  }
-  .stacked-navbar:hover, .stacked-navbar:active {
-    position: relative;
-    height: 9.5rem;
+    background-color: #ccd5ae;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: #ccd5ae;
-
+    position: relative;
   }
+
   .stacked-nav h2 {
     color: #303030;
     display: flex;
