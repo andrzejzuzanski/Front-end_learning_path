@@ -18,28 +18,50 @@ const navbarSelector = document.querySelector(".stacked-navbar");
 
 navbarSelector.addEventListener("click", () => {
   let navbarHeight = navbarSelector.style.height;
-  if(navbarHeight === "" || navbarHeight === "3rem"){
+  if (navbarHeight === "" || navbarHeight === "3rem") {
     navbarSelector.style.height = "9.5rem";
   } else {
     navbarSelector.style.height = "3rem";
   }
-
-})
+});
 
 //HTML container
-if(isMobile){
+if (isMobile) {
   const allContainers = document.querySelectorAll(".main-container");
 
-  for(let container of allContainers){
+  for (let container of allContainers) {
     container.addEventListener("click", () => {
       let containerHeight = container.style.maxHeight;
-      if(containerHeight === "" || containerHeight === "5rem"){
-        container.style.maxHeight = "80vh"
+      if (containerHeight === "" || containerHeight === "5rem") {
+        container.style.maxHeight = "80vh";
       } else {
-        container.style.maxHeight = "5rem"
+        container.style.maxHeight = "5rem";
       }
-  })
-  };
+    });
+  }
+}
+
+//Contact container
+const contactButttonMain = document.querySelectorAll("#contact-buttton");
+const contactContainer = document.querySelector(".contact-container");
+const closeButton = document.querySelector("#close-button");
+const mailElement = document.querySelector(".contact-body");
+const mailButton = mailElement.querySelectorAll("p");
+
+for (button of contactButttonMain) {
+  button.addEventListener("click", (e) => {
+    contactContainer.classList.toggle("visibility");
+    e.preventDefault();
+  });
+}
+closeButton.addEventListener("click", () => {
+  contactContainer.classList.toggle("visibility");
+});
+
+for (mail of mailButton) {
+  mail.addEventListener("click", (e) => {
+    navigator.clipboard.writeText("andrzejzuzanski@gmail.com");
+  });
 }
 
 //Easter egg script
