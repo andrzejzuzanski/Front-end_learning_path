@@ -70,6 +70,41 @@ main {
 .main-container h1 {
   text-align: center;
 }
+
+.contact-container {
+  width: 15rem;
+  height: 10rem;
+  background-color: #ccd5ae;
+  position: absolute;
+  bottom: -8rem;
+  right: 2rem;
+  visibility: hidden;
+  transition: bottom 1s;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.contact-head {
+  display: flex;
+  justify-content: flex-end;
+}
+#close-button {
+  cursor: pointer;
+}
+.contact-body a,
+p {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  text-decoration: none;
+  color: #303030;
+}
+.visibility {
+  visibility: visible;
+  bottom: 2rem;
+}
 footer {
   display: flex;
   justify-content: center;
